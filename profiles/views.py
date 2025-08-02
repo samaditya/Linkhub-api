@@ -11,6 +11,10 @@ class ProfileViewSet(viewsets.ModelViewSet):
     queryset = Profile.objects.all()
     serializer_class = ProfileSerializer
 
+    def perform_create(self, serializer):
+        # Automatically set the owner to the current logged-in user
+        serializer.save(owner=self.request.user)
+
 class LinkViewSet(viewsets.ModelViewSet):
     queryset = Link.objects.all()
     serializer_class = LinkSerializer
