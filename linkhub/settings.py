@@ -149,3 +149,8 @@ SECURE_SSL_REDIRECT = True
 SESSION_COOKIE_SECURE = True
 CSRF_COOKIE_SECURE = True
 USE_X_FORWARDED_HOST = True
+
+STATIC_URL = 'static/'
+
+# Add this line for WhiteNoise in production
+STATIC_ROOT = BASE_DIR / "staticfiles"
