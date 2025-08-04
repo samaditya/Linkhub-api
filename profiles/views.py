@@ -10,6 +10,7 @@ from .serializers import ProfileSerializer, LinkSerializer
 class ProfileViewSet(viewsets.ModelViewSet):
     queryset = Profile.objects.all()
     serializer_class = ProfileSerializer
+    filterset_fields = ['owner__username']
 
     def perform_create(self, serializer):
         # Automatically set the owner to the current logged-in user

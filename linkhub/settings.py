@@ -45,6 +45,7 @@ INSTALLED_APPS = [
     'rest_framework',
     'profiles',
     'corsheaders',
+    'django_filters',
 ]
 
 MIDDLEWARE = [
@@ -133,3 +134,11 @@ CORS_ALLOWED_ORIGINS = [
     "http://localhost:8080", # Optional: for local testing
     "http://127.0.0.1:5500", # Optional: for local testing with VS Code Live Server
 ]
+REST_FRAMEWORK = {
+    'DEFAULT_AUTHENTICATION_CLASSES': [
+        'rest_framework.authentication.TokenAuthentication',
+    ],
+    'DEFAULT_FILTER_BACKENDS': [
+        'django_filters.rest_framework.DjangoFilterBackend'
+    ],
+}
