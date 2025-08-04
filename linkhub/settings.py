@@ -56,7 +56,8 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
-    'corsheaders.middleware.CorsMiddleware', 
+    'corsheaders.middleware.CorsMiddleware',
+    # 'whitenoise.middleware.WhiteNoiseMiddleware'
 ]
 
 ROOT_URLCONF = 'linkhub.urls'
@@ -153,4 +154,4 @@ USE_X_FORWARDED_HOST = True
 STATIC_URL = 'static/'
 
 # Add this line for WhiteNoise in production
-STATIC_ROOT = BASE_DIR / "staticfiles"
+# STATIC_ROOT = BASE_DIR / "staticfiles"
