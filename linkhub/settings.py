@@ -142,3 +142,4 @@ REST_FRAMEWORK = {
         'django_filters.rest_framework.DjangoFilterBackend'
     ],
 }
+CSRF_TRUSTED_ORIGINS = ['https://web-production-e8cd7.up.railway.app/'] 
